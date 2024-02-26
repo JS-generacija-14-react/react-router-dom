@@ -1,6 +1,6 @@
 import "./App.css";
 import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
-import { Home, Users, About } from "./components";
+import { Home, Users, About, UserItem } from "./components";
 import UsersContextProvider from "./context/UserContext";
 
 function App() {
@@ -23,6 +23,7 @@ function App() {
           poklopi sa trenutnom putanjom*/}
             <Route path="/about" element={<About />} />
             <Route path="/users" element={<Users />} />
+            <Route path="/users/:userId" element={<UserItem />} />
             <Route path="/" element={<Home />} />
           </Routes>
         </Router>
